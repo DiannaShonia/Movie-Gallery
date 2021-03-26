@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+.app {
+	height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.animation-area {
+	width: 100%;
+	height: 100%;
 }
+.box-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  background-color: #000;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box-area li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 25px;
+	height: 25px;
+	animation: animate 20s linear infinite;
+	bottom: 0;
+  	border: solid 1px rgba(255, 255, 255, 0.616);
 }
+.box-area li:nth-child(1) {
+	left: 92%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 0s;
+	animation-duration: 10s;
 
-.App-link {
-  color: #61dafb;
 }
+.box-area li:nth-child(2) {
+	left: 5%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 0.5s;
+	animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+	left: 24%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 3.5s;
+	animation-duration: 10s;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.box-area li:nth-child(4) {
+	left: 82%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 2.5s;
+	animation-duration: 10s;
+
+}
+.box-area li:nth-child(5) {
+	left: 72%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 0.5s;
+	animation-duration: 10s;
+
+}
+.box-area li:nth-child(6) {
+	left: 13%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 2.5s;
+  animation-duration: 10s;
+
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-1000px) rotate(360deg);
+		opacity: 0.3;
+	}
 }
